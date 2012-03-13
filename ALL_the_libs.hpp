@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <deque>
+#include <exception>
 #include <fstream>
 #include <iostream>
 #include <list>
@@ -8,6 +9,7 @@
 #include <memory>
 #include <set>
 #include <sstream>
+#include <stdexcept>
 #include <string>
 #include <utility>
 #include <vector>
