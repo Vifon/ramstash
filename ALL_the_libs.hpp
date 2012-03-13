@@ -13,6 +13,7 @@
 #include <vector>
 
 #include <cassert>
+#include <cmath>
 #include <cstdlib>
 #include <cstring>
 #include <ncurses.h>
