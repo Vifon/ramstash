@@ -16,6 +16,7 @@
 
 #include <cassert>
 #include <cmath>
+#include <csetjmp>
 #include <cstdlib>
 #include <cstring>
 #include <ncurses.h>
