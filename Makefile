@@ -37,7 +37,7 @@ debug: all
 v: valgrind
 valgrind: CFLAGS += -g
 valgrind: all
-	@ valgrind-run ./a.out
+	@ valgrindc ./a.out
 
 .PHONY: check-syntax
 check-syntax:
