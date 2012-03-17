@@ -4,12 +4,16 @@ O=0
 std=c++0x
 LFLAGS=
 
+CMD=$(CXX) -O$(O) $(WARN) -std=$(std) $(CFLAGS) $^ -o $@ $(LFLAGS)
+COLORIZER=
+
 
 .PHONY: all
 all: a.out
 
 a.out: test.cpp
-	$(CXX) -O$(O) $(WARN) -std=$(std) $(CFLAGS) $^ -o $@ $(LFLAGS)
+	@ echo $(CMD)
+	@ $(CMD) $(COLORIZER)
 
 .PHONY: c clean
 c: clean
@@ -32,6 +36,10 @@ debug: O=0
 debug: CC=gcc
 debug: CXX=g++
 debug: all
+
+.PHONY: color
+color: COLORIZER=2>&1 | perl -ne 'if (-t STDOUT) { if (/error/) { print "[31m" . $$_ . "[0m" } elsif (/warning/) { print "[33m" . $$_ . "[0m" } else { print } } else { print }'
+color: all
 
 .PHONY: v valgrind
 v: valgrind
