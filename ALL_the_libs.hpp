@@ -7,6 +7,7 @@
 #include <locale>
 #include <map>
 #include <memory>
+#include <queue>
 #include <set>
 #include <sstream>
 #include <stdexcept>
