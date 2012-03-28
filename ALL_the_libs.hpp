@@ -1,3 +1,6 @@
+#ifndef _ALLTHELIBS_H_
+#define _ALLTHELIBS_H_
+
 #include <algorithm>
 #include <deque>
 #include <exception>
@@ -29,4 +32,6 @@
 #include <tuple>
 #include <unordered_map>
 #include <unordered_set>
+#endif
+
 #endif
