@@ -1,7 +1,7 @@
 CFLAGS=
 WARN=-Wall -Wextra -Weffc++
 O=0
-std=c++0x
+std=c++11
 LFLAGS=
 
 CMD=$(CXX) -O$(O) $(WARN) -std=$(std) $(CFLAGS) $^ -o $@ $(LFLAGS)
