@@ -1,0 +1,21 @@
+#!/usr/bin/env perl
+
+use warnings;
+use strict;
+use 5.010;
+
+use autodie;
+
+use File::Slurp;
+use File::Copy;
+use Term::ANSIColor qw(:constants);
+
+
+my @ignore;
+@ignore = read_file "$ENV{HOME}/.ram_stash/.ignore", chomp => 1 if -r "$ENV{HOME}/.ram_stash/.ignore";
+my @files = read_dir "$ENV{HOME}/.ram_stash/";
+@files = grep {not $_ ~~ @ignore} @files;
+
+copy "$ENV{HOME}/.ram_stash/$_", $ARGV[0] // "$ENV{HOME}/ram/" for @files;
+
+say BOLD, GREEN, "*", RESET, " ramdisk rearmed";

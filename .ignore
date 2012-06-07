@@ -1,4 +1,6 @@
 .ignore
 .git
 .gitignore
+ramclean
+ramrearm
 ALL_the_libs.hpp

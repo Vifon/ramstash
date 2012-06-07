@@ -1,0 +1,10 @@
+#!/bin/bash
+
+remount()
+{
+    umount $@ ~/ram 2> /dev/null && mount ~/ram
+    return $?
+}
+
+(remount && echo "$(tput bold)$(tput setaf 2)*$(tput sgr0) ramdisk cleaned") ||\
+(remount -l && echo "$(tput bold)$(tput setaf 3)*$(tput sgr0) ramdisk will be cleaned soon"; exit 1)
