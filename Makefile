@@ -45,7 +45,7 @@ color: all
 v: valgrind
 valgrind: CFLAGS += -g
 valgrind: all
-	@ valgrindc ./a.out
+	@ command -v valgrindc > /dev/null 2>&1 && valgrindc ./a.out || valgrind ./a.out
 
 .PHONY: check-syntax
 check-syntax:
