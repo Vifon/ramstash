@@ -4,7 +4,7 @@ O=0
 std=c++11
 LFLAGS=
 
-CMD=$(CXX) -O$(O) $(WARN) -std=$(std) $(CFLAGS) $< -o $@ $(LFLAGS)
+CMD=$(CXX) -O$(O) $(WARN) -std=$(std) -I$(HOME)/.ram_stash $(CFLAGS) $< -o $@ $(LFLAGS)
 COLORIZER=
 
 

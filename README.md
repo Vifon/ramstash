@@ -43,13 +43,7 @@ to $HOME/.ram_stash
 5. Add $HOME/.ram_stash to your `PATH` variable (for example in bashrc) or move
 files "ramclean" and "ramrearm" to a directory that is in `PATH`.
 
-Optional:
-
-If you want to use the default environment, add $HOME/.ram_stash to
-`CPLUS_INCLUDE_PATH` variable. If you use gcc 4.6 instead of 4.7, change
--std=c++11 to -std=c++0x in the Makefile.
-
 DEPENDENCIES
 ============
 
-perl 5.10 or newer, perl-ansicolor, perl-file-slurp, gcc 4.7 (only for the default Makefile)
+perl 5.10 or newer, perl-ansicolor, perl-file-slurp, gcc 4.7 (only for the default Makefile; alternatively change -std=c++11 to -std=c++0x if you want to use gcc 4.6)
