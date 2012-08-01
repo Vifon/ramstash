@@ -3,4 +3,5 @@
 .gitignore
 ramclean
 ramrearm
+README.md
 ALL_the_libs.hpp
